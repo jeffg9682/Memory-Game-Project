@@ -107,7 +107,7 @@ h1 {
     float: right;
     cursor: pointer;
 }
-
+/* Added the @media for multiple screen responsiveness */
 @media only screen and (max-width: 800px){
   .deck .card{
     width: 75px;

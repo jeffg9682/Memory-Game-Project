@@ -34,7 +34,7 @@ function shuffle(array) {
     return array;
 }
 
-// Starting Game
+// Starting Game and shuffle of cards
 function initGame() {
 	var cards = shuffle(symbols);
 	$deck.empty();
@@ -78,7 +78,7 @@ function endGame(moves, score) {
 		text: 'With ' + moves + ' Moves and ' + score + ' Stars in ' + second + ' Seconds.\n BAM!!!!',
 		type: 'success',
 		confirmButtonColor: '#02ccba',
-		confirmButtonText: 'Play again!'
+		confirmButtonText: 'Give it another try!'
 	}).then(function (isConfirm) {
 		if (isConfirm) {
 			initGame();
@@ -95,8 +95,8 @@ $restart.bind('click', function () {
 		text: "Your current game will be lost!",
 		type: 'warning',
 		showCancelButton: true,
-		confirmButtonColor: '#02ccba',
-		cancelButtonColor: '#f95c3c',
+		confirmButtonColor: '#800000',
+		cancelButtonColor: '#02ccba',
 		confirmButtonText: 'Yes, Restart Game!'
 	}).then(function (isConfirm) {
 		if (isConfirm) {
@@ -105,7 +105,7 @@ $restart.bind('click', function () {
 	})
 });
 
-// Card flip funcions. Researched a lot of this code through google & github repositories to get ideas. 
+// Card flip funcions. Researched a lot of this code through google & multiple github repositories to get ideas. 
 var addCardListener = function () {
 
 	
