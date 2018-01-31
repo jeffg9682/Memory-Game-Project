@@ -1,5 +1,5 @@
 // Card symbols to match and setting up the card game. Got additional icons from http://fontawesome.io/icons/
-
+// Got ideas on code from GitHub https://github.com/PoBlue
 let symbols = ['sun-o', 'sun-o', 'star-o', 'star-o', 'space-shuttle', 'space-shuttle', 'anchor', 'anchor', 'paper-plane-o', 'paper-plane-o', 'bolt', 'bolt', 'bomb', 'bomb', 'diamond', 'diamond'],
 	opened = [],
 	match = 0,
