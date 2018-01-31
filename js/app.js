@@ -43,15 +43,15 @@ function initGame() {
 	$moveNum.text('0');
 	$ratingStars.removeClass('fa-star-o').addClass('fa-star');
 	for (var i = 0; i < cards.length; i++) {
-		$deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
+		$deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'));
 	}
 	addCardListener();
 
 	resetTimer(currentTimer);
 	second = 0;
-	$timer.text(`${second}`)
+	$timer.text(`${second}`);
 	initTime();
-};
+}
 
 // Set Rating and final Score
 function setRating(moves) {
@@ -67,7 +67,7 @@ function setRating(moves) {
 		rating = 0;
 	}
 	return { score: rating };
-};
+}
 
 // End of game modal pop up
 function endGame(moves, score) {
@@ -83,7 +83,7 @@ function endGame(moves, score) {
 		if (isConfirm) {
 			initGame();
 		}
-	})
+	});
 }
 
 // Restart Game. Found SweetAlert & swal on https://sweetalert.js.org/guides/. Also modal pop up for restarting game.
@@ -102,7 +102,7 @@ $restart.bind('click', function () {
 		if (isConfirm) {
 			initGame();
 		}
-	})
+	});
 });
 
 // Card flip funcions. Researched a lot of this code through google & multiple github repositories to get ideas. 
@@ -110,7 +110,7 @@ var addCardListener = function () {
 
 	
 	$deck.find('.card').bind('click', function () {
-		var $this = $(this)
+		var $this = $(this);
 
 		if ($this.hasClass('show') || $this.hasClass('match')) { return true; }
 
@@ -155,8 +155,8 @@ var addCardListener = function () {
 
 function initTime() {
 	currentTimer = setInterval(function () {
-		$timer.text(`${second}`)
-		second = second + 1
+		$timer.text(`${second}`);
+		second = second + 1;
 	}, 1000);
 }
 
