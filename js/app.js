@@ -55,17 +55,14 @@ function initGame() {
 
 // Set Rating and final Score
 function setRating(moves) {
-	var rating = 3;
+	var rating = 1;
 	if (moves > rank3stars && moves < rank2stars) {
 		$ratingStars.eq(2).removeClass('fa-star').addClass('fa-star-o');
 		rating = 2;
 	} else if (moves > rank2stars && moves < rank1stars) {
 		$ratingStars.eq(1).removeClass('fa-star').addClass('fa-star-o');
-		rating = 1;
-	} else if (moves > rank1stars) {
-		$ratingStars.eq(0).removeClass('fa-star').addClass('fa-star-o');
-		rating = 0;
-	}
+		rating = 3;
+	}; 
 	return { score: rating };
 }
 
